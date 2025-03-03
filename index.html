@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>css layout-float exampls</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <h1>Grid of Boxes</h1>
+        <p>Float boxes side by side:</p>
+
+        <div class="clearfix">
+            <div class="box" style="background-color:#bbb">
+                <p>Some text inside the box.</p>
+            </div>
+            <div class="box" style="background-color:#ccc">
+                <p>Some text inside the box.</p>
+            </div>
+            <div class="box" style="background-color:#ddd">
+                <p>Some text inside the box.</p>
+            </div>
+        </div>
+
+        <p><strong>Note:</strong> Here, we use the clearfix hack to take care of the layout flow.
+            We also use the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove
+            this code to see the effect.
+        </p>
+
+
+        <h2>Images Side by Side</h2>
+        <p>Float images side by side:</p>
+
+        <div class="clearfix">
+            <div class="img-container">
+                <img src="./img_5terre.jpg" alt="Italy" style="width:100%">
+            </div>
+            <div class="img-container">
+                <img src="./img_forest.jpg" alt="Forest" style="width:100%">
+            </div>
+            <div class="img-container">
+                <img src="./img_mountains.jpg" alt="Mountains" style="width:100%">
+            </div>
+        </div>
+
+        <p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property
+            to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the
+            effect.
+        </p>
+
+        <h2>Equal Height Boxes</h2>
+        <p>Floating boxes with equal heights:</p>
+
+        <div class="clearfix">
+        <div class="box1" style="background-color:#bbb">
+            <h2>Box 1</h2>
+            <p>Some content, some content, some content</p>
+        </div>
+        <div class="box1" style="background-color:#ccc">
+            <h2>Box 2</h2>
+            <p>Some content, some content, some content</p>
+            <p>Some content, some content, some content</p>
+            <p>Some content, some content, some content</p>
+        </div>
+        </div>
+
+        <p>This example not very flexible. It is ok to use CSS height if you can guarantee that the boxes will always have the same amount of content in them, but that's not always the case. If you try the example above on a mobile phone (or resize the browser window), you will see that the second box's content will be displayed outside of the box.</p>
+        <p>Go back to the tutorial and find another solution, if this is not what you want.</p>
+        
+        
+        <h1>Flexible Boxes</h1>
+
+        <div class="flex-container">
+            <div class="box">Box 1 - This is some text to make sure that the content gets really tall. This is some text to make sure that the content gets really tall.</div>
+            <div class="box">Box 2 - My height will follow Box 1.</div>
+        </div>
+
+        <p>Try to resize the browser window to see the flexible layout.</p>
+        <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+    </body>
+
+</html>
